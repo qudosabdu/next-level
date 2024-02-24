@@ -1,9 +1,6 @@
-import Image from 'next/image';
 import information_technology from '../../public/information_technology.png';
 import data_center from '../../public/Vector.png';
 import Vector1 from '../../public/Vector1.png';
-
-
 import React from 'react';
 import Image from 'next/image';
 
