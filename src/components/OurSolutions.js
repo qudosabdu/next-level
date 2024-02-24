@@ -1,3 +1,9 @@
+import Image from 'next/image';
+import information_technology from '../../public/information_technology.png';
+import data_center from '../../public/Vector.png';
+import Vector1 from '../../public/Vector1.png';
+
+
 import React from 'react';
 import Image from 'next/image';
 
@@ -27,21 +33,21 @@ function OurSolutions() {
     {
       serviceName: "IT Services",
       serviceDescription: "Collaboratively administrate turnkey channels whereas virtual e-tailers.",
-      imgUrl: "/images/IT_Services_Icon.png",
+      imgUrl: {information_technology},
       altText: "IT Services Icon",
       learnMoreUrl: "#"
     },
     {
       serviceName: "Data Center & Cloud Services",
       serviceDescription: "Objectively seize scalable metrics whereas proactive e-services.",
-      imgUrl: "/images/Data_Center_Cloud_Services_Icon.png",
+      imgUrl: {data_center},
       altText: "Data Center & Cloud Services Icon",
       learnMoreUrl: "#"
     },
     {
       serviceName: "Emerging Technologies",
       serviceDescription: "Seamlessly empower fully researched growth strategies.",
-      imgUrl: "/images/Emerging_Technologies_Icon.png",
+      imgUrl: {Vector1},
       altText: "Emerging Technologies Icon",
       learnMoreUrl: "#"
     }
