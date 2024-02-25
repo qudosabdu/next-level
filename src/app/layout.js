@@ -1,9 +1,15 @@
-import { Inter } from "next/font/google";
+import { IBM_Plex_Sans_Arabic } from "next/font/google";
 import "./globals.css";
 import Nav from "../components/Nav";
 import LandingPage from "../components/LandingPage";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = IBM_Plex_Sans_Arabic({
+  style: "normal",
+  weight: ['100', '200', '300', '400', '500', '600', '700',],
+  display: "swap",
+  subsets: ["arabic"],
+
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -14,10 +20,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-      <LandingPage />
-
-      <Nav />
-        {children}</body>
+        <LandingPage />
+        <Nav />
+        {children}
+      </body>
     </html>
   );
 }

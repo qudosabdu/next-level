@@ -1,15 +1,17 @@
+import React from 'react';
+import Image from 'next/image';
 import information_technology from '../../public/information_technology.png';
 import data_center from '../../public/Vector.png';
 import Vector1 from '../../public/Vector1.png';
-import React from 'react';
-import Image from 'next/image';
+
 
 function ServiceCard({ serviceName, serviceDescription, imgUrl, altText, learnMoreUrl }) {
   return (
     <div className="flex flex-col px-7 pt-12 pb-7 bg-indigo-600 rounded-md shadow-2xl max-md:px-5">
       <div className="flex flex-col">
         <div className="flex flex-col text-xl font-bold text-stone-300">
-          <Image src={imgUrl} alt={altText} width="89" height="86" />
+         <Image src={imgUrl} alt={altText} width='50' height='50' />
+
           <div className="mt-5">
             <span>{serviceName}</span>
           </div>

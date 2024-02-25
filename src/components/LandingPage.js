@@ -1,11 +1,36 @@
+"use client"
 import React from "react";
 import Image from "next/image";
+import { useEffect } from 'react';
 import EmptyLandingLogo from "../../public/LandingLogo.png";
 import FilledLandingLogo from "../../public/FilledLandingLogo.png";
 import styles from "./FilledImage.module.css";
 function LandingPage() {
+
+  useEffect(() => {
+    // Set a delay of 2000 milliseconds (2 seconds)
+    const delay = 3000;
+
+    // Apply smooth scroll behavior after the delay
+    const timeoutId = setTimeout(() => {
+      document.documentElement.style.scrollBehavior = 'smooth';
+      window.scrollTo({
+        top: 635,
+      });
+    }, delay);
+
+    // Revert back to the default scroll behavior after the scroll
+    return () => {
+      clearTimeout(timeoutId);
+      document.documentElement.style.scrollBehavior = 'auto';
+    };
+  }, [])
+  
+
   return (
     <div className="h-screen">
+              <div className="bg-primaryM absolute w-[159px] h-[179px] md:w-[579px] md:h-[579px] top-[350px] -left-72 blur-2xl opacity-25 overflow-hidden rounded-full z-30"></div>
+        <div className="bg-primaryM absolute w-[579px] h-[579px] top-[-200px]  right-0 blur-2xl opacity-30 overflow-hidden rounded-full"></div>
       <div className="text-center ">
         <div className={`relative transform scale-75 top-40 z-10 `}>
           <Image
