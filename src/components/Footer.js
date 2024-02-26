@@ -30,18 +30,18 @@ function Footer() {
 
   return (
     <>
-      <header className="flex flex-col self-center px-5 max-w-full text-center">
+      <header className="flex flex-col self-center px-5 max-w-full text-center py-10">
         <section className="flex flex-col justify-center max-md:max-w-full ">
-          {/* <SectionTitle
-            lightText={sectionTitleLightText}
-            boldText={sectionTitleBoldText}
-          /> */}
           <div className="text-4xl font-semibold text-center text-indigo-600">
             <span className="font-light text-white">Start your</span>
-            <span className="font-bold text-indigo-600">{" "}new project</span><br />
-            <span className="font-light text-white">{" "}with</span>
-            <span className="font-bold text-indigo-600">{" "}LevelFive</span>
-            <span className="font-light text-white">{" "}in just a few clicks!!!</span>
+            <span className="font-bold text-indigo-600"> new project</span>
+            <br />
+            <span className="font-light text-white"> with</span>
+            <span className="font-bold text-indigo-600"> LevelFive</span>
+            <span className="font-light text-white">
+              {" "}
+              in just a few clicks!!!
+            </span>
           </div>
           <p className="self-center mt-4 text-xl font-light whitespace-nowrap text-stone-300">
             Book a free call and let’s see if we’re a good fit
@@ -61,7 +61,7 @@ function Footer() {
         <section className="flex gap-5 justify-between items-center mr-10 ml-10 max-md:flex-wrap max-md:mr-2.5 max-md:max-w-full">
           <Image
             loading="lazy"
-            src={footerLogo }
+            src={footerLogo}
             className="self-stretch max-w-full aspect-[4.17] w-[238px]"
             alt="LevelFive Logo"
             width={238}

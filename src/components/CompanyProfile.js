@@ -1,80 +1,64 @@
 import React from "react";
-import Lines from '../../public/lines.png'
+import Lines from "../../public/lines.png";
 import Image from "next/image";
 
-const LineStrip = ({ height, width, bgColor }) => (
-  <div style={{ height: height, width: width, backgroundColor: bgColor }}></div>
-);
-
-const OurStorySection = () => (
-  <section className="flex flex-col my-auto font-light max-md:mt-10 max-md:max-w-full">
-    <h2 className="text-4xl text-neutral-100 max-md:max-w-full">
-      <span className="text-base max-md:max-w-full">Who we are</span>
-      <strong className="font-semibold max-md:max-w-full">
-        {" "}
-        The Story Behind our Name{" "}
-      </strong>
-      <p className="max-md:max-w-full">level Five</p>
-      <div className="max-w-full h-1 bg-violet-500 w-[302px]" />
-    </h2>
-    <p className="mt-14 text-xl text-stone-300 max-md:mt-10 max-md:max-w-full">
-      Level Five Information Systems Technology Company emerged as a boutique IT
-      house with a distinctive story. The choice of “Level Five” was akin to the
-      journey through a boutique, where each level represents a curated space of
-      expertise. Just as one explores unique offering in a boutique, Level Five
-      aspires to deliver specialized and tailored IT solutions at the highest
-      level of proficiency.
-      <br />
-      <br />
-      The” Level five” designation reflects the boutique approach – an exclusive
-      commitment to excellence, personalization, and attention to detail. Like a
-      boutique that carefully selects its inventory, our IT house meticulously
-      crafts solutions that cater specifically to the unique needs of each
-      client. In this narrative, “Level Five” becomes not just a measure of
-      proficiency but a promise of a boutique IT experience, where technology is
-      finely curated and elegantly tailored for every client’s journey
-    </p>
-  </section>
-);
+import Button from "./Button";
+import master_logo_footer from "../../public/FooterLogo.png";
 
 function CompanyProfile() {
-//   const lineStripsData = [
-//     { height: "858px", width: "3px", bgColor: "bg-slate-900" },
-//     { height: "826px", width: "1px", bgColor: "bg-indigo-950" },
-//     { height: "796px", width: "1.5px", bgColor: "bg-slate-900" },
-//     { height: "766px", width: "1px", bgColor: "bg-violet-950" },
-//     { height: "732px", width: "3px", bgColor: "bg-indigo-700" },
-//     { height: "704px", width: "3px", bgColor: "bg-violet-600" },
-//     { height: "672px", width: "1px", bgColor: "bg-indigo-700" },
-//     { height: "643px", width: "3px", bgColor: "bg-indigo-900" },
-//     { height: "612px", width: "7px", bgColor: "bg-indigo-950" },
-//     { height: "580px", width: "3px", bgColor: "bg-indigo-950" },
-//     { height: "550px", width: "1px", bgColor: "bg-slate-900" },
-//     { height: "519px", width: "1px", bgColor: "bg-slate-900" },
-//   ];
-
   return (
-    <main className="flex flex-col ">
-      <section className=" self-center w-full max-w-[1571px] max-md:max-w-full">
-        <div className="flex gap-5 max-md:flex-col max-md:gap-0">
-          <article className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-            <div className="flex grow gap-5 justify-between items-start px-2 max-md:flex-wrap max-md:mt-10 max-md:max-w-full">
-              <Image src={Lines}
-              width={500}
-              height={500}
+    <div className="flex flex-col px-20  bg-black text-white max-md:px-5 z-0">
+      <div className="justify-center mt-44 ml-5 max-md:mt-10 max-md:max-w-full z-20">
+        <div className="flex gap-5 max-md:flex-col max-md:gap-0 max-md:">
+          <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+            <div className="mt-24 text-sm md:text-xl text-white  max-md:mt-10 max-md:max-w-full">
+              <Image src={Lines} alt="Lines" className="max-md:hidden " />
+            </div>
+          </div>
+          <div className="flex flex-col w-1/2 max-md:ml-0 max-md:w-full">
+            <div className="flex flex-col grow md:text-4xl font-light text-white  max-md:mt-10 max-md:max-w-full ">
+              <div className="text-base max-md:max-w-full">Who we are</div>
+              <div className=" text-lg font-semibold text-white max-md:max-w-full sm:text-xl lg:text-3xl">
+                The Story Behind our Name
+              </div>
+              <div className="max-md:max-w-full">level Five</div>
+              <div className="max-w-full h-1 bg-violet-500 w-[60px] md:w-[120px]" />
+              <div className="mt-20  md:text-xl max-md:mt-10 max-md:max-w-full">
+                Level Five Information Systems Technology Company emerged as a
+                boutique IT house with a distinctive story. The choice of “Level
+                Five” was akin to the journey through a boutique, where each
+                level represents a curated space of expertise. Just as one
+                explores unique offering in a boutique, Level Five aspires to
+                deliver specialized and tailored IT solutions at the highest
+                level of proficiency.
+                <br />
+                <br />
+                The” Level five” designation reflects the boutique approach – an
+                exclusive commitment to excellence, personalization, and
+                attention to detail. Like a boutique that carefully selects its
+                inventory, our IT house meticulously crafts solutions that cater
+                specifically to the unique needs of each client. In this
+                narrative, “Level Five” becomes not just a measure of
+                proficiency but a promise of a boutique IT experience, where
+                technology is finely curated and elegantly tailored for every
+                client’s journey
+              </div>
+              <Button
+                title="Explore Services"
+                className=" text-sm hidden sm:block py-4"
               />
             </div>
-          </article>
-          <OurStorySection />
+          </div>
         </div>
-      </section>
-      <img
+      </div>
+      <Image
         loading="lazy"
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/55cfc0db335d51eb7bbe8fee795cc6006e9ba795a68f8b1e4beeedffbb4a9737?apiKey=c54fe1b1a9934721bc0cbe496673d9bc&"
-        alt="Representational Image"
-        className="mt-8 w-full aspect-[5.88] max-md:max-w-full"
+        src={master_logo_footer}
+        alt="edge"
+        className="max-md:hidden max-md:mt-10 max-md:max-w-full max-md:ml-0 max-md:w-full z-30"
       />
-    </main>
+      <div className="bg-primaryM absolute  md:w-[500px] md:h-[500px] top-[3200px] -right-0 blur-2xl opacity-25 overflow-hidden rounded-full z-20"></div>
+    </div>
   );
 }
 
